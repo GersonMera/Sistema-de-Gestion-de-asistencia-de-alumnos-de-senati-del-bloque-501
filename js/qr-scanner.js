@@ -31,3 +31,4 @@ function iniciarEscaneo() {
 
     html5QrcodeScanner.render(onScanSuccess);
 }
+// Hola desde aqui
