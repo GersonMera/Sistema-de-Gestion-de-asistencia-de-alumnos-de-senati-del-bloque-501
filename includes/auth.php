@@ -11,7 +11,7 @@ function isAdmin() {
 
 function requireAuth() {
     if (!isAuthenticated()) {
-        header("Location: /asis/login.php");
+        header("Location: /login.php");
         exit();
     }
 }
@@ -19,7 +19,7 @@ function requireAuth() {
 function requireAdmin() {
     requireAuth();
     if (!isAdmin()) {
-        header("Location: /asis/dashboard.php");
+        header("Location: /dashboard.php");
         exit();
     }
 }
@@ -28,9 +28,9 @@ function requireAdmin() {
 function redirectIfAuthenticated() {
     if (isAuthenticated()) {
         if (isAdmin()) {
-            header("Location: /asis/admin/dashboard.php");
+            header("Location: /admin/dashboard.php");
         } else {
-            header("Location: /asis/dashboard.php");
+            header("Location: /dashboard.php");
         }
         exit();
     }
