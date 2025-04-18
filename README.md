@@ -59,3 +59,5 @@ Registro
 accesos: 
 ADMIN001
 admin123
+
+la base de datos se llama : attendance_system
