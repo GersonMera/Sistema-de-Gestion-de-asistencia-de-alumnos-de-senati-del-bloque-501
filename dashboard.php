@@ -23,7 +23,7 @@ $recent_attendance = $stmt->fetchAll();
 <html>
 <head>
     <title>Dashboard - Sistema de Asistencia</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dasboarda-alumnos.css">
 </head>
 <body>
     <nav class="nav">

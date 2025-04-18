@@ -1,0 +1,202 @@
+/* Variables de colores SENATI */
+:root {
+    --senati-blue: #004b93;         /* Azul principal SENATI */
+    --senati-blue-light: #0069d9;   /* Azul claro para hover */
+    --senati-blue-dark: #00387a;    /* Azul oscuro para detalles */
+    --senati-accent: #004b93;       /* Acento */
+    --senati-white: #ffffff;        /* Blanco */
+    --senati-light-gray: #f2f7ff;   /* Gris claro para fondos */
+    --senati-gray: #e6e9f0;         /* Gris para bordes */
+    --senati-text: #333333;         /* Color de texto principal */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--senati-light-gray);
+    color: var(--senati-text);
+  }
+  
+  /* Barra de navegación */
+  .nav {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav span {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+  
+  .nav a {
+    color: var(--senati-white);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav a:hover {
+    background-color: var(--senati-blue-light);
+  }
+  
+  /* Dashboard principal */
+  .dashboard {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-card {
+    background-color: var(--senati-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    border-top: 4px solid var(--senati-blue);
+  }
+  
+  .dashboard-card h3 {
+    color: var(--senati-blue);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--senati-gray);
+    padding-bottom: 0.5rem;
+  }
+  
+  .dashboard-card p {
+    margin: 0.7rem 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Contenedor para escáner QR */
+  .qr-container {
+    background-color: var(--senati-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-top: 4px solid var(--senati-blue);
+    text-align: center;
+  }
+  
+  .qr-container h3 {
+    color: var(--senati-blue);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  #qr-reader {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1rem auto;
+    min-height: 300px;
+    border: 2px dashed var(--senati-gray);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--senati-light-gray);
+  }
+  
+  .qr-container button {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .qr-container button:hover {
+    background-color: var(--senati-blue-light);
+  }
+  
+  /* Tabla de asistencias */
+  .table-container {
+    background-color: var(--senati-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    border-top: 4px solid var(--senati-blue);
+  }
+  
+  .table-container h3 {
+    color: var(--senati-blue);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--senati-gray);
+    padding-bottom: 0.5rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  thead {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+  }
+  
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--senati-gray);
+  }
+  
+  th {
+    font-weight: 500;
+  }
+  
+  tbody tr:hover {
+    background-color: var(--senati-light-gray);
+  }
+  
+  /* Responsivo para celar */
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .nav a {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    
+    table {
+      font-size: 0.9rem;
+    }
+  }
