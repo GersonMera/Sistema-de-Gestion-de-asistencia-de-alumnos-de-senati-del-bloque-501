@@ -31,4 +31,4 @@ function iniciarEscaneo() {
 
     html5QrcodeScanner.render(onScanSuccess);
 }
-// Hola desde aqui
+// Hola desde aqui, yo esta en GIT
