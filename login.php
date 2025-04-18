@@ -1,6 +1,9 @@
 <?php
-session_start();
+require_once 'includes/auth.php';
 require_once 'config/database.php';
+
+// Redirigir si ya está autenticado
+redirectIfAuthenticated();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $institutional_id = $_POST['institutional_id'];
