@@ -26,7 +26,7 @@ $students = $pdo->query("
 <html>
 <head>
     <title>Lista de Estudiantes - Sistema de Asistencia</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/lista-estudiantes.css">
 </head>
 <body>
     <nav class="nav">
