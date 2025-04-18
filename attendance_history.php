@@ -32,7 +32,7 @@ $attendance_records = $stmt->fetchAll();
 <html>
 <head>
     <title>Historial de Asistencia</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/historialAlumno.css">
 </head>
 <body>
     <nav class="nav">
