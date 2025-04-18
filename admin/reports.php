@@ -40,7 +40,7 @@ $daily_records = $stmt->fetchAll();
 <html>
 <head>
     <title>Reportes - Sistema de Asistencia</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reporte-de-alumnos.css">
 </head>
 <body>
     <nav class="nav">
