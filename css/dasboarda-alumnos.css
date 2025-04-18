@@ -180,7 +180,7 @@
     background-color: var(--senati-light-gray);
   }
   
-  /* Responsive */
+  /* Responsivo para celar */
   @media (max-width: 768px) {
     .dashboard-grid {
       grid-template-columns: 1fr;
