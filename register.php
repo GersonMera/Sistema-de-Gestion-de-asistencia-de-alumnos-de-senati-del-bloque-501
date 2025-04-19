@@ -26,7 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="container">
-        <h2>Student Registration</h2>
+    <img src="img/Senati_logo.png" alt="Logo" />
+        <h2>Registrate</h2>
         <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
         
         <form method="POST" action="">
@@ -53,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Register</button>
         </form>
         
-        <p>Already have an account? <a href="login.php">Login here</a></p>
+        <p>Ya tienes una cuenta? <a href="login.php">Inicia sesion aqui</a></p>
     </div>
 </body>
 </html>
