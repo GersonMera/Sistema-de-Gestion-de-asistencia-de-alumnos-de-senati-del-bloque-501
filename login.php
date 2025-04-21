@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <title>Login - Sistema de Asistencia</title>
     <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
