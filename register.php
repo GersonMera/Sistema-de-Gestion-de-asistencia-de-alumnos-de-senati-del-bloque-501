@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <title>Register - Attendance System</title>
     <link rel="stylesheet" href="css/register.css">
+    <link rel="icon" href="img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">

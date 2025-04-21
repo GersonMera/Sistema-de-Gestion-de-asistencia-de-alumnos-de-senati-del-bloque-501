@@ -26,6 +26,7 @@ $students = $pdo->query("
 <html>
 <head>
     <title>Lista de Estudiantes - Sistema de Asistencia</title>
+    <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>

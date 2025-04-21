@@ -26,6 +26,7 @@ $active_qr = $stmt->fetch();
 <head>
     <title>Generar QR - Sistema de Asistencia</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
 </head>
 <body>

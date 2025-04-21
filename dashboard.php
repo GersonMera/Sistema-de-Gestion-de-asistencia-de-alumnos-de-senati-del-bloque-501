@@ -24,6 +24,7 @@ $recent_attendance = $stmt->fetchAll();
 <head>
     <title>Dashboard - Sistema de Asistencia</title>
     <link rel="stylesheet" href="css/dasboarda-alumnos.css">
+    <link rel="icon" href="img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
     <nav class="nav">
