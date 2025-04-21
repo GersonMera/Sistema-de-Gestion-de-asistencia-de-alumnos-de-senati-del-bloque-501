@@ -1,0 +1,207 @@
+/* Variables de colores SENATI */
+:root {
+    --senati-blue: #004b93;         /* Azul principal SENATI */
+    --senati-blue-light: #0069d9;   /* Azul claro para hover */
+    --senati-blue-dark: #00387a;    /* Azul oscuro para detalles */
+    --senati-accent: #004b93;       /* Acento */
+    --senati-white: #ffffff;        /* Blanco */
+    --senati-light-gray: #f2f7ff;   /* Gris claro para fondos */
+    --senati-gray: #e6e9f0;         /* Gris para bordes */
+    --senati-text: #333333;         /* Color de texto principal */
+    --status-completo: #28a745;     /* Verde para estado completo */
+    --status-solo-entrada: #ffc107; /* Amarillo para solo entrada */
+    --status-incompleto: #dc3545;   /* Rojo para incompleto */
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--senati-light-gray);
+    color: var(--senati-text);
+  }
+  
+  /* Barra de navegación */
+  .nav {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav a {
+    color: var(--senati-white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  
+  .nav a:hover {
+    background-color: var(--senati-blue-light);
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--senati-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border-top: 4px solid var(--senati-blue);
+  }
+  
+  h2 {
+    color: var(--senati-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--senati-gray);
+    padding-bottom: 0.75rem;
+  }
+  
+  /* Filtros */
+  .filters {
+    background-color: var(--senati-light-gray);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--senati-gray);
+  }
+  
+  .filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .filters select {
+    padding: 0.6rem;
+    border-radius: 4px;
+    border: 1px solid var(--senati-gray);
+    background-color: var(--senati-white);
+    min-width: 140px;
+    font-size: 0.95rem;
+    color: var(--senati-text);
+    outline: none;
+  }
+  
+  .filters select:focus {
+    border-color: var(--senati-blue);
+    box-shadow: 0 0 0 2px rgba(0, 75, 147, 0.2);
+  }
+  
+  .filters button {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .filters button:hover {
+    background-color: var(--senati-blue-light);
+  }
+  
+  /* Tabla de asistencias */
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: var(--senati-blue);
+    color: var(--senati-white);
+  }
+  
+  th, td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--senati-gray);
+  }
+  
+  th {
+    font-weight: 500;
+  }
+  
+  tbody tr:hover {
+    background-color: var(--senati-light-gray);
+  }
+  
+  /* Estados de asistencia */
+  .status-completo,
+  .status-solo-entrada,
+  .status-incompleto {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .status-completo {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--status-completo);
+    border: 1px solid rgba(40, 167, 69, 0.2);
+  }
+  
+  .status-solo-entrada {
+    background-color: rgba(255, 193, 7, 0.1);
+    color: #856404;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+  }
+  
+  .status-incompleto {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: var(--status-incompleto);
+    border: 1px solid rgba(220, 53, 69, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .filters form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .filters select, 
+    .filters button {
+      width: 100%;
+    }
+    
+    .nav-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    table {
+      font-size: 0.9rem;
+    }
+    
+    th, td {
+      padding: 0.6rem;
+    }
+  }

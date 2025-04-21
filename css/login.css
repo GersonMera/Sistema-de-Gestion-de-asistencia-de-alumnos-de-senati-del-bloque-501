@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #5a7fb5; 
+  --secondary: #7b9cbe;
+  --accent: #8dacd0;
+  --dark: #3c4e60; 
+  --light: #f8f9fa;
+  --error: #e74c3c;
+  --silver: rgba(220, 220, 220, 0.3); 
+  --border-radius: 8px;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: url('../img/sede.webp') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(60, 78, 96, 0.8), rgba(90, 127, 181, 0.75));
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--border-radius);
+  padding: 35px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--silver);
+  overflow: hidden;
+  transform: translateZ(0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container img {
+  width: 140px;
+  margin-bottom: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.container h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+/* ===== SOLUCIÓN AL PROBLEMA DE SOBREPOSICIÓN ===== */
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  height: 56px; /* Altura fija para el contenedor */
+}
+
+.form-group label {
+  position: absolute;
+  left: 15px;
+  top: 18px; /* Posición inicial centrada */
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  pointer-events: none;
+  transition: var(--transition);
+  background: transparent;
+  padding: 0 4px;
+  z-index: 1; /* Asegura que esté sobre el input */
+}
+
+.form-group input {
+  width: 100%;
+  height: 100%;
+  padding: 24px 15px 10px; /* Más padding arriba para dejar espacio a la etiqueta */
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: var(--transition);
+  font-family: 'Inter', sans-serif;
+}
+
+/* El truco: cuando el input está enfocado O cuando tiene contenido */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: 6px;
+  font-size: 11px;
+  color: white;
+  background: rgba(144, 163, 192, 0.3);
+  padding: 0 6px;
+  border-radius: 4px;
+  z-index: 2; /* Asegura que esté por encima cuando se mueve */
+}
+
+/* Crucial: el placeholder debe ser transparente */
+.form-group input::placeholder {
+  color: transparent;
+}
+
+/* ===== FIN DE LA SOLUCIÓN ===== */
+
+.form-group input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(141, 172, 208, 0.25);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--border-radius);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.3px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+button[type="submit"]:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+p a {
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: var(--error);
+  font-size: 13px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  padding: 8px 12px;
+  background: rgba(231, 76, 60, 0.15);
+  border-radius: 4px;
+  border-left: 3px solid var(--error);
+  width: 100%;
+  text-align: center;
+}
+
+.input-error {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.25) !important;
+  animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-2px); }
+  40%, 80% { transform: translateX(2px); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    max-width: 380px;
+    padding: 30px 25px;
+  }
+  
+  .container img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    width: 100%;
+    padding: 25px 20px;
+  }
+  
+  .container img {
+    width: 110px;
+    margin-bottom: 20px;
+  }
+  
+  .container h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    height: 52px; /* Ligeramente más pequeño en móviles */
+  }
+  
+  button[type="submit"] {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 700px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .container img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .container h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    height: 48px; /* Más pequeño en pantallas bajas */
+  }
+}

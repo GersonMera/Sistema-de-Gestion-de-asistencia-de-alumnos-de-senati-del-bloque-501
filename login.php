@@ -1,6 +1,9 @@
 <?php
-session_start();
+require_once 'includes/auth.php';
 require_once 'config/database.php';
+
+// Redirigir si ya está autenticado
+redirectIfAuthenticated();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $institutional_id = $_POST['institutional_id'];
@@ -32,22 +35,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <html>
 <head>
     <title>Login - Sistema de Asistencia</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
     <div class="container">
+    <img src="img/Senati_logo.png" alt="Logo" />
         <h2>Iniciar Sesión</h2>
         <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
         
         <form method="POST" action="">
             <div class="form-group">
+                
+                <input type="text" name="institutional_id" placeholder="" required>
                 <label>ID Institucional:</label>
-                <input type="text" name="institutional_id" required>
             </div>
             
             <div class="form-group">
+                
+                <input type="password" name="password" placeholder="" required>
                 <label>Contraseña:</label>
-                <input type="password" name="password" required>
             </div>
             
             <button type="submit">Iniciar Sesión</button>
