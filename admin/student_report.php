@@ -51,8 +51,12 @@ foreach ($attendance as $record) {
 <html>
 <head>
     <title>Reporte de Estudiante - Sistema de Asistencia</title>
+
+    <link rel="stylesheet" href="../css/report-alumnos.css">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
+
 </head>
 <body>
     <nav class="nav">
