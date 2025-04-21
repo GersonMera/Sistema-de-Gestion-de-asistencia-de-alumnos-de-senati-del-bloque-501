@@ -17,8 +17,12 @@ $stats = $pdo->query("
 <html>
 <head>
     <title>Panel Administrativo - Sistema de Asistencia</title>
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/stylo-dasboard-admin.css">
+
 </head>
 <body>
     <nav class="nav">
