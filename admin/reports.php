@@ -42,7 +42,7 @@ $daily_records = $stmt->fetchAll();
     <title>Reportes - Sistema de Asistencia</title>
 
     <link rel="stylesheet" href="../css/report.css">
-    <link rel="stylesheet" href="../css/style.css">
+    
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/reporte-de-alumnos.css">
 

@@ -54,7 +54,7 @@ foreach ($attendance as $record) {
 
     <link rel="stylesheet" href="../css/report-alumnos.css">
 
-    <link rel="stylesheet" href="../css/style.css">
+    
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
 
 </head>
