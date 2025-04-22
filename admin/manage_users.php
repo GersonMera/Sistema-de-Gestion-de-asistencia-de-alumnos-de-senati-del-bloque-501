@@ -33,7 +33,6 @@ $users = $stmt->fetchAll();
                 <a href="dashboard.php">← Volver al Panel</a>
             </div>
             <div>
-                <a href="add_user.php" class="button">Agregar Usuario</a>
                 <a href="../logout.php">Cerrar Sesión</a>
             </div>
         </div>
