@@ -25,6 +25,7 @@ $users = $stmt->fetchAll();
 <head>
     <title>Gestión de Usuarios - Sistema de Asistencia</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
     <nav class="nav">
