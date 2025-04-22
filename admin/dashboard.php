@@ -32,6 +32,7 @@ $stats = $pdo->query("
             </div>
             <div>
                 <a href="generate_qr.php" class="nav-button">Generar QR</a>
+                <a href="manage_users.php">Gestionar Usuarios</a>
                 <a href="reports.php">Reportes</a>
                 <a href="../logout.php">Cerrar Sesión</a>
             </div>
