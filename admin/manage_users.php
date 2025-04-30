@@ -28,6 +28,7 @@ $users = $stmt->fetchAll();
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
+
     <nav class="nav">
         <div class="nav-container">
             <div>

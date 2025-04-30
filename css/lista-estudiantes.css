@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
 /* Variables de colores */
 :root {
     --primary-blue: #0047AB;
@@ -17,7 +18,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Quicksand", sans-serif;
   }
   
   body {

@@ -43,7 +43,7 @@ if (!$user) {
 <html>
 <head>
     <title>Editar Usuario - Sistema de Asistencia</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/editar.css">
     <link rel="icon" href="../img/Senati_logo.png" type="image/x-icon">
 </head>
 <body>
