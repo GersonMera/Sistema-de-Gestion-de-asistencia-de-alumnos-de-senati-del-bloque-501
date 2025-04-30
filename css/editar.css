@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+:root {
+  --primary-blue: #2563eb;
+  --deep-blue: #1e40af;
+  --soft-blue: #93c5fd;
+  --pale-blue: #eff6ff;
+  --pure-white: #ffffff;
+  --snow: #f9fafb;
+  --silver: #e5e7eb;
+  --slate: #6b7280;
+  --charcoal: #1f2937;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --transition: all 0.22s ease-out;
+}
+
+body {
+  background-color: var(--snow);
+  font-family: "Quicksand", sans-serif;
+  color: var(--charcoal);
+  line-height: 1.6;
+}
+
+.nav {
+  background: var(--pure-white);
+  box-shadow: var(--shadow-sm);
+  border-bottom: 1px solid var(--silver);
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--slate);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  color: var(--primary-blue);
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: var(--pure-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--silver);
+}
+
+h2 {
+  color: var(--primary-blue);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  color: var(--charcoal);
+  font-size: 0.95rem;
+}
+
+input, select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--silver);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: var(--pure-white);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px var(--pale-blue);
+}
+
+button[type="submit"] {
+  background: var(--primary-blue);
+  color: var(--pure-white);
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 0.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+button[type="submit"]:hover {
+  background: var(--deep-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+select[disabled] {
+  background: var(--snow);
+  color: var(--slate);
+  cursor: not-allowed;
+}
+
+.password-note {
+  font-size: 0.85rem;
+  color: var(--slate);
+  margin-top: -0.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .nav {
+    padding: 1rem;
+  }
+}
