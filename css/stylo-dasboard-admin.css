@@ -108,7 +108,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Responsive (opcional) */
+/* Responsive */
 @media (max-width: 768px) {
     .dashboard-grid {
         flex-direction: column;
