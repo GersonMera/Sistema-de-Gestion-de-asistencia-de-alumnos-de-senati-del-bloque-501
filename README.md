@@ -1,63 +1,61 @@
-Desarrollar un sistema de registro de asistencia mediante un código QR único. A continuación, les explico brevemente cómo funcionará:
 
-🔹 Registro y Login:
-El usuario (estudiante) se registrará usando su ID institucional, nombre, apellido y una contraseña. Luego podrá iniciar sesión con su ID y contraseña.
+# Sistema de Gestión de Asistencia de Alumnos
 
-🔹 Dashboard del Estudiante:
-Una vez dentro, tendrá acceso a un dashboard donde podrá:
+## Descripción del Proyecto
 
-Ver su historial de asistencias.
+Este sistema permite la gestión de asistencia de estudiantes a través de un innovador código QR único. Los estudiantes podrán registrar su asistencia de forma rápida y eficiente utilizando sus dispositivos móviles.
 
-Acceder a sus datos personales.
+## Funcionalidades
 
-Usar la cámara de su celular para escanear un código QR que marcará su asistencia tanto al ingresar como al salir.
+### 🔹 Registro y Login
+- Los estudiantes pueden registrarse utilizando su ID institucional, nombre, apellido y una contraseña.
+- Ingreso al sistema mediante la autenticación de ID y contraseña.
 
-🔹 Panel del Administrador:
-El administrador tendrá funciones como:
+### 🔹 Dashboard del Estudiante
+- Acceso al historial de asistencias.
+- Visualización y actualización de datos personales.
+- Uso de la cámara del dispositivo móvil para escanear el código QR y registrar la asistencia.
 
-Generar el código QR.
+### 🔹 Gestión de Asistencia
+- Los administradores pueden ver el historial de asistencia de los estudiantes.
+- El sistema permite gestionar y consultar la asistencia de cada estudiante de forma sencilla.
 
-Ver la lista de estudiantes.
+## Tecnologías Utilizadas
 
-Consultar detalles individuales.
+Este sistema ha sido desarrollado utilizando las siguientes tecnologías:
+- **PHP**: Backend para la gestión de procesos y lógica de negocio.
+- **MySQL**: Base de datos para almacenar los registros de los estudiantes y asistencia.
+- **HTML/CSS**: Frontend para la creación de las interfaces de usuario.
+- **JavaScript**: Para la interactividad en el cliente, como la toma de fotos para el QR y la validación en el navegador.
 
-Generar reportes de asistencia (presentes y ausentes).
+## Instrucciones de Instalación
 
-Ver reportes por estudiante.
+1. **Clonar el repositorio**:
+   ```bash
+   git clone https://github.com/usuario/https://github.com/GersonMera/Sistema-de-Gestion-de-asistencia-de-alumnos-de-senati-del-bloque-501.git
+   ```
 
-Actualmente ya tenemos el backend desarrollado. Lo que falta es aplicar los estilos con CSS propio, pero es importante mantener una línea visual coherente. La idea es que no usemos colores distintos entre sí (por ejemplo, azul con blanco por un lado y verde con rojo por otro), para que todo tenga una apariencia uniforme.
+2. **Configurar la base de datos**:
+   - Importa el archivo `attendance_system (1).sql` en tu servidor MySQL.
+   - Asegúrate de configurar las credenciales de la base de datos en el archivo `config/database.php`.
 
-Cada uno podrá trabajar en su parte de CSS, pero siguiendo un mismo estilo base.
+3. **Configurar el servidor**:
+   - Asegúrate de tener un servidor web que soporte PHP (como Apache o Nginx).
+   - Sube los archivos del proyecto al servidor.
 
-👉 Aquí les dejo un resumen de las vistas implementadas hasta el momento:
+4. **Acceder al sistema**:
+   - Accede a la URL de tu servidor (ej. `http://localhost/index.php`) para usar el sistema.
 
-Administrador:
+## Contribuciones
 
-Dashboard
+Si deseas contribuir al proyecto, sigue estos pasos:
 
-Generar QR
+1. Forkea el repositorio.
+2. Crea una nueva rama (`git checkout -b feature/nueva-caracteristica`).
+3. Haz commit de tus cambios (`git commit -am 'Agrega nueva característica'`).
+4. Haz push a la rama (`git push origin feature/nueva-caracteristica`).
+5. Abre un Pull Request.
 
-Reporte general
+## Licencia
 
-Detalle del estudiante
-
-Lista de estudiantes
-
-Reporte por estudiante
-
-Estudiantes (General):
-
-Historial de asistencia
-
-Dashboard
-
-Login
-
-Registro
-
-
-accesos: 
-ADMIN001
-admin123
-
-la base de datos se llama : attendance_system
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.

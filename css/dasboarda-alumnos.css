@@ -299,4 +299,28 @@ tbody tr:hover {
   thead {
     top: 120px;
   }
+
 }
+
+  
+  /* Responsivo para celar */
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .nav-container {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .nav a {
+      margin-left: 0;
+      margin-right: 1rem;
+    }
+    
+    table {
+      font-size: 0.9rem;
+    }
+  }
+
